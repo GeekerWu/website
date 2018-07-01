@@ -1,0 +1,52 @@
+.dark-theme {
+    ion-content {
+      background-color: #090f2f;
+      color: #fff;
+    }
+    .header .toolbar-background {
+      background-color: #090f2f;
+    }
+    .grid,
+    .sift-title {
+      background-color: #090f2f;
+    } //bgcolor
+    .tab-button {
+      background-color: #090f2f;
+    }
+    $tabs-background:#090f2f;
+    $background-color:grey;
+
+    .content-md{
+      color: #fff;
+      background-color:#090f2f;
+    }
+    .toolbar-title-md{
+      color: #fff;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+      color: #fff;
+    }
+    .md .menu-inner{
+      background-color: #090f2f;
+    }
+    ion-content {
+      background-color: #555;
+    }
+  
+    .item {
+      background-color: #555;
+    }
+  
+    ion-textarea {
+      background-color: #666;
+    }
+  
+    .toolbar-background {
+      background-color: #444;
+    }
+  
+    .tab-button {
+      background-color: #444;
+    }
+  }
+  

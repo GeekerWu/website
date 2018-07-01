@@ -1,0 +1,31 @@
+<ion-content class="login-page">
+  <img src="https://planningmdev.lenovo.com/sciweb/web/assets/img/bg.png" class="fixed-content" />
+  <div class="bar-titlte">
+    <span id="Login">Login</span>
+    <button class="btn-title" ion-button icon-only (click)="serverchange()">
+      <ion-icon name="settings"></ion-icon>
+    </button>
+  </div>
+  <ion-card>
+    <img src="https://planningmdev.lenovo.com/sciweb/web/assets/img/maobl_bg.png" class="blur fixed-content" />
+    <ion-item no-lines class="card-logo">
+      <img src="https://planningmdev.lenovo.com/sciweb/web/assets/img/login.png" height="120" width="60" />
+    </ion-item>
+    <ion-item class="card-username">
+      <ion-input type="text" placeholder="Your itcode" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item class="card-password">
+      <ion-input type="password" placeholder="Your AD Password " [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item class="card-otpCode">
+      <ion-input type="otpCode" placeholder="Your otpCode " [(ngModel)]="otpCode"></ion-input>
+    </ion-item>
+    <ion-item no-lines class="card-remember">
+      <label item-right>Remember Me hahaha</label>
+      <ion-toggle [(ngModel)]="rememberMe" (ionChange)="remberMechange()"></ion-toggle>
+    </ion-item>
+    <button ion-button block class="card-button" color="default" (click)="logIn_timeout(username, password)">
+      Login
+    </button>
+  </ion-card>
+</ion-content>

@@ -1,18 +1,197 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+    <ion-title>CHNITS</ion-title>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <button ion-button menuToggle icon-only>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-col>
+          <!--<ion-col>
+            <ion-chip #chip1>
+              <ion-label>Default</ion-label>
+              <button ion-button clear color="light" (click)="delete(chip1)">
+                <ion-icon name="close-circle"></ion-icon>
+              </button>
+            </ion-chip>
+            <ion-chip #chip2>
+              <ion-icon name="pin" color="primary"></ion-icon>
+              <ion-label>With Icon</ion-label>
+              <button ion-button (click)="delete(chip2)">
+                <ion-icon name="close"></ion-icon>
+              </button>
+            </ion-chip>
+            <ion-chip #chip3>
+              <ion-avatar>
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
+              </ion-avatar>
+              <ion-label>With Avatar</ion-label>
+              <button ion-button clear color="dark" (click)="delete(chip3)">
+                <ion-icon name="close-circle"></ion-icon>
+              </button>
+            </ion-chip>
+          </ion-col>-->
+          <ion-col>
+            <button ion-button (click)="navTo('aboutus')">jump new page</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="secondary">Secondary</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="danger">Danger</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="light">Light</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="dark">Dark</button>
+          </ion-col>
+
+          <ion-col>
+            <ion-searchbar
+                    [(ngModel)]="myInput"
+                    [showCancelButton]="shouldShowCancel"
+                    (ionInput)="onInput($event)"
+                    (ionCancel)="onCancel($event)">
+            </ion-searchbar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="assets/imgs/taxfree.png"  (click)="presentAboutusModal('aboutus')"/>
+          <ion-card-content>
+            <ion-card-title>
+              About US
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        testA
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="assets/imgs/taxfree.png" (click)="presentAboutusModal('vision')"/>
+          <ion-card-content>
+            <ion-card-title>
+              Vision
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        testB
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="assets/imgs/taxfree.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              TBD
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        testC
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="assets/imgs/taxfree.png" (click)="navTo('nationaltax')"/>
+          <ion-card-content>
+            <ion-card-title>
+              National Tax
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        testD
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="assets/imgs/taxfree.png" (click)="navTo('domestictax')"/>
+          <ion-card-content>
+            <ion-card-title>
+              Domestic tax
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        testE
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <img src="assets/imgs/taxfree.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              Declaration information
+            </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+        testF
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+
+
+  <!--<ion-item class="files">
+    My BDP
+    <ion-icon name="ios-arrow-down" item-right *ngIf="isShow" (click)="isShow=!isShow"></ion-icon>
+    <ion-icon name="ios-arrow-forward" item-right *ngIf="!isShow" (click)="isShow=!isShow"></ion-icon>
+  </ion-item>
+  <ion-grid *ngIf="isShow">
+    <ion-row>
+      <ion-col *ngFor="let list of folderList" col-6>
+        <ion-list no-lines>
+          <ion-item (click) = "navTo(list.id)">
+            <ion-icon name="folder" item-left color="danger"></ion-icon>
+            {{list.name}}
+            <p><span *ngIf = "list.folder_count != '0'" >{{list.folder_count}}</span>&nbsp;folders&nbsp;&nbsp;<span *ngIf = "list.dashboard_count !='0'">{{list.dashboard_count}}&nbsp;dashboards</span></p>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>-->
+
+  <!--<ion-item class="chart">
+    <div #EchartsContent  class="EchartsDiv"></div>
+  </ion-item>-->
+
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>contact us!!!</ion-title>
+  </ion-toolbar>
+</ion-footer>

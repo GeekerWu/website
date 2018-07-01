@@ -1,0 +1,173 @@
+page-login {
+  .content-md {
+    color: #000;
+    background-color: #fff;
+
+  }
+  .col-customize{
+    text-align:right ;
+
+  }
+
+  .login-page {
+    position: relative;
+    /*img{
+      height:99%;
+      width: 100%;
+    }*/
+    ion-toolbar{
+      position: absolute;
+      top: 1%;
+       ion-title{
+         .toolbar-title-md{
+           position: absolute;
+           color: rgba(255, 255, 255,1);
+           font-size: 2.0em !important;
+         }
+       }
+
+      .toolbar-background-md {
+        position: absolute;
+        border-color: rgb(255, 255, 255);
+        background: rgba(248, 248, 248, 0);
+      }
+    }
+    ion-card {
+      position: absolute;
+      top: 9%;
+      left:8%;
+      width:80%;
+      height: 500px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0);
+
+      .card-logo{
+        position: absolute;
+        width: 75%;
+        height: 30%;
+        left:11%;
+        top: 0;
+        text-align: center;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+
+      }
+      .blur {
+        -webkit-filter: blur(40px); /* Chrome, Opera */
+        -moz-filter: blur(40px);
+        -ms-filter: blur(40px);
+        filter: blur(40px);
+
+      }
+      .item-md{
+        color: #000;
+        background-color:rgba(255, 255, 255, 0);
+      }
+      .card-username{
+        position: absolute;
+        top: 28%;
+        text-align: center;
+        width: 80%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      .card-password{
+        position: absolute;
+        top: 43%;
+        text-align: center;
+        width: 80%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 1);
+      }
+      .card-otpCode{
+        position: absolute;
+        top: 58%;
+        text-align: center;
+        width: 80%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 1);
+      }
+      .card-remember{
+        position: absolute;
+        top: 69%;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 80%;
+        left: 10%;
+      }
+    /*  .card-button{
+        position: absolute;
+        top: 80%;
+        text-align: center;
+      }*/
+
+    }
+    .card-button{
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      text-align: center;
+      width:80%;
+    }
+    .bar-titlte {
+      position: relative;
+    }
+    .btn-title{
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      color: #fff;
+      background-color: transparent;
+    }
+    .btn-title-left1{
+      position: absolute;
+      left: 5px;
+      bottom: 10px;
+      color:  #ffffff;
+      background-color: transparent;
+    }
+    .btn-title-left2{
+      position: absolute;
+      right: 5px;
+      bottom: 10px;
+      color:  #ffffff;
+      background-color: transparent;
+    }
+    #Login{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    .item-ios{
+      background-color:transparent;
+    }
+    /*
+    .card-logo{
+      position: absolute;
+      top: 36%;
+    }
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+*/
+  }
+}
