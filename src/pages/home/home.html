@@ -1,6 +1,8 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>CHNITS</ion-title>
+    <ion-title><img src="../../assets/imgs/logo-website.png" height="50" width="200"/>恒星环宇国际税务工作室</ion-title>
+
+    <button class="EnglishBtn" ion-button color="dark">English</button>
     <ion-toolbar>
       <ion-grid>
         <ion-row>
@@ -9,46 +11,30 @@
               <ion-icon name="menu"></ion-icon>
             </button>
           </ion-col>
-          <!--<ion-col>
-            <ion-chip #chip1>
-              <ion-label>Default</ion-label>
-              <button ion-button clear color="light" (click)="delete(chip1)">
-                <ion-icon name="close-circle"></ion-icon>
-              </button>
-            </ion-chip>
-            <ion-chip #chip2>
-              <ion-icon name="pin" color="primary"></ion-icon>
-              <ion-label>With Icon</ion-label>
-              <button ion-button (click)="delete(chip2)">
-                <ion-icon name="close"></ion-icon>
-              </button>
-            </ion-chip>
-            <ion-chip #chip3>
-              <ion-avatar>
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==">
-              </ion-avatar>
-              <ion-label>With Avatar</ion-label>
-              <button ion-button clear color="dark" (click)="delete(chip3)">
-                <ion-icon name="close-circle"></ion-icon>
-              </button>
-            </ion-chip>
-          </ion-col>-->
           <ion-col>
-            <button ion-button (click)="navTo('aboutus')">jump new page</button>
+            <button ion-button color="dark" (click)="navTo('aboutus')">关于我们</button>
           </ion-col>
           <ion-col>
-            <button ion-button color="secondary">Secondary</button>
+            <button ion-button color="dark">企业视野</button>
           </ion-col>
           <ion-col>
-            <button ion-button color="danger">Danger</button>
+            <button ion-button color="dark">境内税讯</button>
           </ion-col>
           <ion-col>
-            <button ion-button color="light">Light</button>
+            <button ion-button color="dark">境外税讯</button>
           </ion-col>
           <ion-col>
-            <button ion-button color="dark">Dark</button>
+            <button ion-button color="dark">国别速览</button>
           </ion-col>
-
+          <ion-col>
+            <button ion-button color="dark">申报资料</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="dark">咨询通道</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="dark">观点透视</button>
+          </ion-col>
           <ion-col>
             <ion-searchbar
                     [(ngModel)]="myInput"
@@ -64,12 +50,22 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-slides autoplay="2000" loop="true" speed="500">
+    <ion-slide>
+      <h1>多语种一站式落地服务</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>境外涉税境内对接</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>高精尖经营团队</h1>
+    </ion-slide>
+  </ion-slides>
   <ion-grid>
     <ion-row>
       <ion-col>
         <ion-card>
-          <img src="assets/imgs/taxfree.png"  (click)="presentAboutusModal('aboutus')"/>
+          <img src="assets/imgs/taxfree.png" height="300" width="500" (click)="presentAboutusModal('aboutus')"/>
           <ion-card-content>
             <ion-card-title>
               About US
@@ -84,7 +80,7 @@
       </ion-col>
       <ion-col>
         <ion-card>
-          <img src="assets/imgs/taxfree.png" (click)="presentAboutusModal('vision')"/>
+          <img src="assets/imgs/taxfree.png" height="300" width="500" (click)="presentAboutusModal('vision')"/>
           <ion-card-content>
             <ion-card-title>
               Vision
@@ -99,7 +95,7 @@
       </ion-col>
       <ion-col>
         <ion-card>
-          <img src="assets/imgs/taxfree.png"/>
+          <img src="../../assets/imgs/TBD筹划方案.jpeg" height="300" width="500" />
           <ion-card-content>
             <ion-card-title>
               TBD
@@ -116,10 +112,10 @@
     <ion-row>
       <ion-col>
         <ion-card>
-          <img src="assets/imgs/taxfree.png" (click)="navTo('nationaltax')"/>
+          <img src="../../assets/imgs/境内税讯.jpeg" height="300" width="500" (click)="navTo('nationaltax')"/>
           <ion-card-content>
             <ion-card-title>
-              National Tax
+              境内税讯
             </ion-card-title>
             <p>
               The most popular industrial group ever, and largely
@@ -131,10 +127,10 @@
       </ion-col>
       <ion-col>
         <ion-card>
-          <img src="assets/imgs/taxfree.png" (click)="navTo('domestictax')"/>
+          <img src="assets/imgs/taxfree.png" (click)="navTo('domestictax')" height="300" width="500"/>
           <ion-card-content>
             <ion-card-title>
-              Domestic tax
+              境外税讯
             </ion-card-title>
             <p>
               The most popular industrial group ever, and largely
@@ -146,10 +142,10 @@
       </ion-col>
       <ion-col>
         <ion-card>
-          <img src="assets/imgs/taxfree.png"/>
+          <img src="assets/imgs/taxfree.png" height="300" width="500"/>
           <ion-card-content>
             <ion-card-title>
-              Declaration information
+              国别速览
             </ion-card-title>
             <p>
               The most popular industrial group ever, and largely
@@ -160,6 +156,56 @@
         testF
       </ion-col>
     </ion-row>
+    <ion-row>
+    <ion-col>
+      <ion-card>
+        <!--<img src="assets/imgs/taxfree.png" />-->
+
+        <img src="../../assets/imgs/申报资料.jpeg" height="300" width="500" (click)="navTo('nationaltax')"/>
+        <ion-card-content>
+          <ion-card-title>
+            申报资料
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      testG
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <img src="../../assets/imgs/咨询通道.png" (click)="navTo('domestictax')" height="300" width="500"/>
+        <ion-card-content>
+          <ion-card-title>
+            咨询通道
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      testH
+    </ion-col>
+    <ion-col>
+      <ion-card>
+
+        <img src="../../assets/imgs/观点透视.jpeg" height="300" width="500"/>
+        <ion-card-content>
+          <ion-card-title>
+            观点透视
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      testI
+    </ion-col>
+  </ion-row>
   </ion-grid>
 
 
